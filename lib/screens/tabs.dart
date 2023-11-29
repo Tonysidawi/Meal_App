@@ -22,6 +22,7 @@ class TabsScreen extends StatefulWidget {
 
 class _TabsScreenState extends State<TabsScreen> {
   int _selectedPageIndex = 0;
+  // STORE THE LIST OF FAVORITED ITEM IN LIST
   final List<Meal> _favoriteMeals = [];
   Map<Filter, bool> _selectedFilters = {
     Filter.glutenFree: false,
@@ -39,6 +40,7 @@ class _TabsScreenState extends State<TabsScreen> {
     );
   }
 
+// FAVORITE FUCNTION HERE
   void _toggleMealFavoriteStatus(Meal meal) {
     final isExisting = _favoriteMeals.contains(meal);
 
